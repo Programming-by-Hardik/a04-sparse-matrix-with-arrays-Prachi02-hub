@@ -33,18 +33,19 @@ int main() {
 // Function to convert a matrix into sparse matrix format
 void createSparseMatrix(int sparseMatrix[][3], int originalMatrix[][N], int rows, int cols) {
     //WRITE THE FUNCTION DESCRIPTION HERE
-   int k = 0; // Counter for non-zero elements
+    int k = 0; // Counter for non-zero 
+elements
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
             if (originalMatrix[i][j] != 0) {
                 sparseMatrix[k][0] = i; 
                 sparseMatrix[k][1] = j; 
                 sparseMatrix[k][2] = originalMatrix[i][j]; 
-                k++;
-            }
-        }
+        k++;
+      }
     }
-    sparseMatrix[0][2] = k; 
+  }
+  sparseMatrix[0][2] = k; 
 }
 
  
